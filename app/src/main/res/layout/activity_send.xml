@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/back"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:textSize="20dp"
+                android:text="返回"/>
+
+            <TextView
+                android:id="@+id/send_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="发布"
+                android:textSize="20dp" />
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="20dp">
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="请输入您要发布的标题:"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="12sp"
+            android:text="请选择您发布内容的类别:" />
+        <RadioGroup
+            android:id="@+id/rg_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp"
+            android:gravity="center">
+            <RadioButton
+                android:id="@+id/rb_complain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="吐槽"/>
+            <RadioButton
+                android:id="@+id/rb_love"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="表白"/>
+            <RadioButton
+                android:id="@+id/rb_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交友"/>
+            <RadioButton
+                android:id="@+id/rb_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="其他"/>
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="300dp"
+        android:layout_height="360dp"
+        android:layout_gravity="bottom|center"
+        android:paddingBottom="50dp"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="20dp">
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入您要发布的内容:"
+            android:textSize="15sp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
